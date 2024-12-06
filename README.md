@@ -13,7 +13,7 @@ Packages Needed for System
 ```
 yay -S brightnessctl kitty neovim npm picom-ftlabs-git xclip xorg-server xorg-xinit zsh 
 ```
-- Also, I use the JetBrainsMono Nerd Font for everything. You can change the font or go to nerd fonts and install v2.3.3 and manually install them as they will work perfectly. Anything over v2.3.3 will break because the icons are not updated properly.
+- Also, I use the JetBrainsMono Nerd Font for everything. You can change the font or copy the files from .local/share/fonts to your local dir and then run "fc-cache -fv"
 
 Cloning and Copying
 -------------------
