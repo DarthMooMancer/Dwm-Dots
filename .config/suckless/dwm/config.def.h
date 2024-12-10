@@ -36,7 +36,7 @@ static const Layout layouts[] = {	{ "[]=",      tile } };
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 static char dmenumon[2] = "0";
-static const char *dmenucmd[] = { "dmenu_run", "-g", "4", "-l", "5", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", blue, "-sf", dark_gray, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-g", "6", "-l", "8", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", blue, "-sf", dark_gray, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 #include "movestack.c"
@@ -60,7 +60,6 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
   { 0, XF86XK_MonBrightnessUp,		spawn,     SHCMD("brightnessctl set 5%+") },
   { 0, XF86XK_MonBrightnessDown,	spawn,     SHCMD("brightnessctl set 5%-") },
-  { MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

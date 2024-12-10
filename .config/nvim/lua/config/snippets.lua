@@ -20,8 +20,6 @@ local snippets = {
     snippet('public_main',        'public static void main(String[] args) {\n\t${0:pass}\n}'),
     snippet('public_static',      'public static ${1:void} ${2:name}(${3:args}) {\n\t${0:pass}\n}'),
     snippet('trf',                'try {\n\t${0:pass}\n} finally {\n\tinput.close();\n}'),
-    snippet('input',              'Scanner input = new Scanner(System.in);'),
-    snippet('fori',               'for (int i = 0; i < ${1:10}; i++) {\n\t${0:pass};\n}'),
   },
   python = {
     snippet('forr',               'for ${1:x} in range(${2:start}, ${3:end}):\n\t${0:pass}'),

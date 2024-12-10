@@ -8,3 +8,4 @@ static const struct arg args[] = {
 	{ datetime,      "%s "      , "%H:%M" },
 	{ datetime,      "%s "      , "%b %d" },
 };
+
