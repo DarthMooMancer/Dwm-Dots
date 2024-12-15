@@ -1,4 +1,3 @@
-#!/bin/sh
 slstatus &
 feh --bg-fill ~/.config/suckless/dwm/Wallpapers/Nord_waves.jpg &
 picom &
