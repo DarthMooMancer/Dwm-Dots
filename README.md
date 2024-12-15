@@ -11,7 +11,7 @@ Packages Needed for System
 - Make sure you have a aur installer or you can manually install them. Mine is yay so that is what is in this example, but feel free to use whatever.
 
 ```
-yay -S brightnessctl kitty neovim npm picom-ftlabs-git xclip xorg-server xorg-xinit zsh 
+yay -S brightnessctl alacritty neovim picom-ftlabs-git xclip xorg-server feh xorg-xinit zsh 
 ```
 - Also, I use the JetBrainsMono Nerd Font for everything. You can change the font or copy the files from .local/share/fonts to your local dir and then run "fc-cache -fv"
 
