@@ -1,3 +1,6 @@
+[general]
+import = [ "~/.config/alacritty/catppuccin-macchiato.toml" ]
+
 [font]
 size = 7.0
 
@@ -24,10 +27,3 @@ opacity = 1
 [window.padding]
 x = 5
 y = 0
-
-[general]
-import = [ "~/.config/alacritty/catppuccin-macchiato.toml" ]
-
-[cursor]
-style = "Beam"
-thickness = 0.2

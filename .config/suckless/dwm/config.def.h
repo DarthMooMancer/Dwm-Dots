@@ -4,7 +4,7 @@ static const unsigned int gappx	    = 5;
 static const unsigned int snap      = 32;
 static const int showbar            = 1;
 static const int topbar             = 1;
-static const char *barlayout        = "t|s";
+/*static const char *barlayout        = "t|s";*/
 static const char *fonts[]          = { "JetBrainsMono NF style:Medium:size=12" };
 static const char dmenufont[]       = "JetBrainsMono NF style:Medium:size=12";
 static const char *colors[][3]      = {
