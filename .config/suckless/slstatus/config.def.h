@@ -32,7 +32,7 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
   /* function format          argument */
-  { run_command,  " PKGS %s | ", "pacman -Q | wc -l"},
-  { battery_perc, "BAT %s%% | ", "BAT0"},
-  { datetime,     "%s",          "%H:%M %A %d %Y" },
+  { run_command, 	"VOL: %s  •  ", 	"wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{printf \"%d%%\", $2 * 100}'" },
+  { run_command,	"Age: %s  •  ", 	"sh -c 'echo $(( ( $(date +%s) - $(stat -c %W /) ) / 86400 ))'" },
+  { run_command, 	"Up: %s ", 		"uptime -p | cut -d ' ' -f2-" },
 };

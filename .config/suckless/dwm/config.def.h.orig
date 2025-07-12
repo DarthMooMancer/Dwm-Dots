@@ -1,12 +1,12 @@
-#include "/home/andrew/.config/suckless/dwm/themes/catppuccin.h"
-static const unsigned int borderpx  = 0;
+#include "/home/andrew/.config/suckless/dwm/themes/everforest.h"
+static const unsigned int borderpx  = 2;
 static const unsigned int gappx	    = 5;
 static const unsigned int snap      = 32;
 static const int showbar            = 1;
 static const int topbar             = 1;
-/*static const char *barlayout        = "t|s";*/
-static const char *fonts[]          = { "JetBrainsMono NF style:Medium:size=12" };
-static const char dmenufont[]       = "JetBrainsMono NF style:Medium:size=12";
+static const char *barlayout        = "t|s";
+static const char *fonts[]          = { "CaskaydiaCove NFM style:Regular:size=12" };
+static const char dmenufont[]       = "CaskaydiaCove NFM style:Regular:size=12";
 static const char *colors[][3]      = {
 	[SchemeNorm] = { foreground, background, aqua },
 	[SchemeSel]  = { dark_gray, blue, green },
@@ -15,8 +15,9 @@ static const char *colors[][3]      = {
 static const char *tags[] = { "1", "2", "3", "4" };
 static const Rule rules[] = {
 	/* class    instance        title     tags mask   isfloating   monitor */
-	{ "Alacritty", "Alacritty",		  NULL,     1,          0,           -1 },
-	{ "Thorium-browser",  "thorium-browser",   NULL,     1 << 1,     0,           -1 },
+	{ "kitty", "kitty",	      NULL, 1,      0, -1 },
+	{ "steam", "steamwebhelper",  NULL, 1 << 2, 0, -1 }, 
+	{ "firefox-esr", "Navigator", NULL, 1 << 1, 0, -1 }, 
 };
 
 static const float mfact     = 0.55;
@@ -26,7 +27,7 @@ static const int lockfullscreen = 1;
 
 static const Layout layouts[] = {	{ "[]=",      tile } };
 
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -36,14 +37,14 @@ static const Layout layouts[] = {	{ "[]=",      tile } };
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 static char dmenumon[2] = "0";
-static const char *dmenucmd[] = { "dmenu_run", "-g", "6", "-l", "8", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", blue, "-sf", dark_gray, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-g", "12", "-l", "4", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", blue, "-sf", dark_gray, NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 #include "movestack.c"
 #include "X11/XF86keysym.h"
 static const Key keys[] = {
   { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-  { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+  { MODKEY,                       XK_space,      spawn,          {.v = dmenucmd } },
   { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
   { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
   { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
