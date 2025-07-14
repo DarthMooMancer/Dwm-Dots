@@ -1,7 +1,3 @@
-# Dwm-Dots
-Important Information
----------------------
-
 # Installation
 
 Packages Needed for System
